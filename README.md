@@ -30,11 +30,10 @@ You can use this library pretty much anywhere but in this doc, I will use it wit
     ```
 ## Usage
 You can specify the URL to use for both tags and mentions. For example
-
-    ```php
+	```php
 		$tagsYmentions = new TagsYMentions\TagsYMentions($str, ['tags' => ['url' => 'https://github/topics/', title => TagsYMentions\TagsYMentions::USE_NAME], 'mentions' => ['url' => 'https://github.com', title => TagsYMentions\TagsYMentions::USE_NAME]]);
 		$tagsYmentions->taggedYMentioned(); //<a href="https://github.com/topics/lol">#lol</a>...This <a href="https://github.com/topics/message">#message</a> was meant for <a href="https://github.com/16kilobyte">@16kilobyte</a>
-    ```
+	```
 
 ## Meta
 
