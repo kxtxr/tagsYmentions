@@ -19,7 +19,7 @@ You can use this library pretty much anywhere but in this doc, I will use it wit
 
 		$str = "#lol...This #message was meant for @16kilobyte"
 
-			$tagsYmentions = new TagsYMentions\TagsYMentions($str);
+		$tagsYmentions = new TagsYMentions\TagsYMentions($str);
 		$tagsYmentions->taggedYMentioned(); //<a href="/tags/lol">#lol</a>...This <a href="/tags/message">#message</a> was meant for <a href="/users/16kilobyte">@16kilobyte</a>
 		$tagsYmentions->getHashTags(); // ['#lol', '#message']
 		$tagsYmentions->getMentions(); // ['@16kilobyte']
@@ -29,11 +29,11 @@ You can use this library pretty much anywhere but in this doc, I will use it wit
 		$tagsYmentions->setString("The new #string I want to #parse"); // Changes the game.
     ```
 ## Usage
-You can specify the URL to use for both tags and mentions. For example;
+You can specify the URL to use for both tags and mentions. For example
 
     ```php
-    $tagsYmentions = new TagsYMentions\TagsYMentions($str, ['tags' => ['url' => 'https://github/topics/', title => TagsYMentions\TagsYMentions::USE_NAME], 'mentions' => ['url' => 'https://github.com', title => TagsYMentions\TagsYMentions::USE_NAME]]);
-    $tagsYmentions->taggedYMentioned(); //<a href="https://github.com/topics/lol">#lol</a>...This <a href="https://github.com/topics/message">#message</a> was meant for <a href="https://github.com/16kilobyte">@16kilobyte</a>
+		$tagsYmentions = new TagsYMentions\TagsYMentions($str, ['tags' => ['url' => 'https://github/topics/', title => TagsYMentions\TagsYMentions::USE_NAME], 'mentions' => ['url' => 'https://github.com', title => TagsYMentions\TagsYMentions::USE_NAME]]);
+		$tagsYmentions->taggedYMentioned(); //<a href="https://github.com/topics/lol">#lol</a>...This <a href="https://github.com/topics/message">#message</a> was meant for <a href="https://github.com/16kilobyte">@16kilobyte</a>
     ```
 
 ## Meta
