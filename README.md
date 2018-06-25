@@ -4,30 +4,32 @@ Twitter-like hashtags and mentions
 ## Manual Installation without Composer
 You can use this library pretty much anywhere but in this doc, I will use it with codeigniter
 1. Copy folder **system** to your codeigniter projects.
-2. Add this code to your codeigniter index.php before codeigniter core loaded (before this text "* LOAD THE BOOTSTRAP FILE") :
-    ```php
-		/*
-		 * --------------------------------------------------------------------
-		 *
-		 * And away we go...
-		 *
-		 */
+2. Add this code to your codeigniter index.php before codeigniter core loaded (before this text "`* LOAD THE BOOTSTRAP FILE`") :
 
-		require_once BASEPATH . 'tagsYmentions/autoloader.php';
-    
-		...
+```php
+/*
+ * --------------------------------------------------------------------
+ *
+ * And away we go...
+ *
+ */
 
-		$str = "#lol...This #message was meant for @16kilobyte"
+require_once BASEPATH . 'tagsYmentions/autoloader.php';
 
-		$tagsYmentions = new TagsYMentions\TagsYMentions($str);
-		$tagsYmentions->taggedYMentioned(); //<a href="/tags/lol">#lol</a>...This <a href="/tags/message">#message</a> was meant for <a href="/users/16kilobyte">@16kilobyte</a>
-		$tagsYmentions->getHashTags(); // ['#lol', '#message']
-		$tagsYmentions->getMentions(); // ['@16kilobyte']
-		$tagsYmentions->getHashTagsYMentions(); //['tags' => ['#lol', '#message'], 'mentions' => ['@16kilobyte']]
-		$tagsYmentions->getHashTagsYMentions(); //['#lol', '#message', '@16kilobyte']
+...
 
-		$tagsYmentions->setString("The new #string I want to #parse"); // Changes the game.
-    ```
+$str = "#lol...This #message was meant for @16kilobyte"
+
+$tagsYmentions = new TagsYMentions\TagsYMentions($str);
+$tagsYmentions->taggedYMentioned(); //<a href="/tags/lol">#lol</a>...This <a href="/tags/message">#message</a> was meant for <a href="/users/16kilobyte">@16kilobyte</a>
+$tagsYmentions->getHashTags(); // ['#lol', '#message']
+$tagsYmentions->getMentions(); // ['@16kilobyte']
+$tagsYmentions->getHashTagsYMentions(); //['tags' => ['#lol', '#message'], 'mentions' => ['@16kilobyte']]
+$tagsYmentions->getHashTagsYMentions(); //['#lol', '#message', '@16kilobyte']
+
+$tagsYmentions->setString("The new #string I want to #parse"); // Changes the game.
+```
+
 ## Usage
 You can specify the URL to use for both tags and mentions. For example
 
