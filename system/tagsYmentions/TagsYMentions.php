@@ -331,8 +331,7 @@ class TagsYMentions {
 				 * A href
 				 */
 				$href = '<a href="' . $this->hashtagsUrl . $hashtagTitle . '"';
-				$href .= ($this->hashtagsTitle == self::NO_TITLE) ? '' : ' title="';
-				$href .= ($this->hashtagsTitle == self::USE_NAME) ? $hashtagTitle : $this->hashtagsTitle;
+				$href .= ($this->hashtagsTitle == self::NO_TITLE) ? '' : (' title="' . ($this->hashtagsTitle == self::USE_NAME) ? $hashtagTitle : $this->hashtagsTitle);
 				$href .= '">' . $hashtag . '</a>';
 				//create links for hashtags
 				$str = str_replace($hashtag, $href, $str);
@@ -354,10 +353,10 @@ class TagsYMentions {
 				 * A href
 				 */
 				$href = '<a href="' . $this->mentionsUrl . '"';
-				$href .= ($this->mentionsTitle == self::NO_TITLE) ? '' : ' title="';
-				$href .= ($this->mentionsTitle == self::USE_NAME) ? $mentionTitle : $this->mentionsTitle;
+				$href .= ($this->mentionsTitle == self::NO_TITLE) ? '' : (' title="' . ($this->mentionsTitle == self::USE_NAME) ? $mentionTitle : $this->mentionsTitle);
+				$href .= '">' . $mention . '</a>';
 				//create links for mentions
-				$str = str_replace($hashtag, $href, $str);
+				$str = str_replace($mention, $href, $str);
 			}
 	    	
 	    	$this->formattedStr = $str;
