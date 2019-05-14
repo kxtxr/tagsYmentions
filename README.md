@@ -40,7 +40,7 @@ $tagsYmentions->taggedYMentioned(); //<a href="https://github.com/topics/lol">#l
 
 ## Meta
 
-Kator Bryan `16kb` James – [@JamesKator](https://twitter.com/JamesKator) – kator95@gmail.com
+Kator Bryan `16kb` James – [@16kilobyte](https://twitter.com/16kilobyte) – kator95@gmail.com
 
 Distributed under the MIT license. See ``LICENSE`` for more information.
 
